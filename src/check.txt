@@ -1,0 +1,55 @@
+"Message": {
+                "id": "109872",
+                "tempMsgId": "7733_1630059982978",
+                "mrdNumber": "1630059981358",
+                "text": " pradnya3  offtest3 test offline 1630059981358:1630059981259",
+                "postedAt": "1630059983000",
+                "imagePath": null,
+                "From": {
+                    "id": "7733",
+                    "userName": "testpwt2@pwt.com",
+                    "fullName": " test pwt2  ",
+                    "spamStatusWithViewer": "0",
+                    "blockStatusWithViewer": "-1",
+                    "conversationWithViewer": "0",
+                    "mobileNumber": "1234567890",
+                    "emailAddress": "testpwt2@pwt.com",
+                    "address": "null",
+                    "remarks": "",
+                    "appKey": "null",
+                    "creator": "",
+                    "dateRegistered": "2021-07-02 19:00:36.0"
+                },
+                "otherPhoneNumber": "null",
+                "Participants": "testpwt2@pwt.com: testpwt2+Registration+for++pradnya3++offtest3+test+offline+-+Regn.+No.%3A+1630059981358+%0AHello",
+                "Conversation": "10121",
+                "canUserPost": "true",
+                "Provider": "testpwt2",
+                "Publication": {
+                    "id": "13631",
+                    "Provider": "testpwt2",
+                    "title": "testpwt2+Registration+for++pradnya3++offtest3+test+offline+-+Regn.+No.%3A+1630059981358+%0AHello",
+                    "Product": {
+                        "category": "Progress, Prescription, MealPlan, Exercise, Diet, Diagnosis, Appearance, Smart Scope, Featured, AudioVideo, Bill, Appointment",
+                        "name": "Gynaecologist Consultation",
+                        "id": "517",
+                        "price": "null",
+                        "minPrice": "null",
+                        "maxPrice": "null"
+                    },
+                    "orderId": 5962,
+                    "progressLevel": 0
+                },
+                "lastPublicationId": "null",
+                "publicationProgressLevel": "0",
+                "badgeSize": "0",
+                "favStatusWithViewer": "0",
+                "maxGroupSize": "2",
+                "colorFont": "#f5f5f5",
+                "colorDark": "#f28888",
+                "colorLight": "#8222f2",
+                "archiveStart": "false"
+            }
+        }
+    ]
+}

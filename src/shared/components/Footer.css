@@ -1,0 +1,18 @@
+.spac li{
+    padding:1px;
+}
+.center{
+  height:30px;
+ 
+}
+.center ul li{
+  text-align: center;
+  list-style: none;
+  padding:3px;
+  font-size: smaller;
+
+}
+.center ul li a{
+  padding:5px;
+  font-size: small;
+}

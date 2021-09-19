@@ -1,0 +1,8 @@
+.xyzw{
+    list-style: none;
+}
+
+.borderless td, .borderless tr {
+    border: none;
+    margin-top: 30px;
+}

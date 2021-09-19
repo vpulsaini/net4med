@@ -1,0 +1,33 @@
+ul{
+    list-style: none;
+}
+.tog{
+   
+
+    list-style: none;
+    text-align: left;
+    padding:"20px";
+}
+.hog{
+    font-weight: 200;
+}
+.tog ul{
+    padding:"20px";
+}
+.bog{
+   padding: "20px";
+   color:"white";
+   text-decoration: none;
+}
+
+.rrt{
+    text-decoration: none;
+}
+#alx{
+    text-decoration: none;
+    padding:"20px";
+}
+.babysa ul li{
+    color:white;
+    padding:"20px";
+}

@@ -1,0 +1,176 @@
+
+.auth {
+  float:left;
+  height: 500px;
+  width: 38rem;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+
+  text-align: left;
+}
+
+.auth h1 {
+  text-align: center;
+  color: white;
+}
+.authx {
+  float:left;
+  margin-top:10px;
+  margin-left:80px;
+  margin-right:10px;
+  width: 90%;
+  max-width: 38rem;
+  border-radius: 6px;
+  background-color: white;
+ 
+  padding: 1rem;
+  text-align: center;
+}
+.authx h1 {
+  text-align: center;
+  color: white;
+}
+
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  display: block;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  font: inherit;
+  background-color: #f1e1fc;
+  color: #4b62c8;
+  border-radius: 4px;
+  border: 1px solid white;
+  text-align: left;
+  padding: 0.25rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions button {
+  cursor: pointer;
+  font: inherit;
+  color: white;
+  background-color: #4b62c8;
+  border: 1px solid #4b62c8;
+  border-radius: 4px;
+  padding: 0.5rem 2.5rem;
+  text-align: center;
+}
+
+.actions button:hover {
+  background-color: #4b62c8;
+  border-color: #4b62c8;
+}
+
+.actions .toggle {
+  margin-top: 1rem;
+  background-color: transparent;
+  color: #4b62c8;
+  border: none;
+ 
+  text-align: center;
+}
+
+.actions .toggle:hover {
+  background-color: transparent;
+  color: #4b62c8
+  ;
+}
+
+
+.logo {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  color: black;
+  margin: 0;
+}
+
+
+
+
+.header a:hover {
+  color: #4b62c8
+  ;
+}
+
+.header button:hover {
+  background-color: #4b62c8
+  ;
+  color: white
+  ;
+}
+.center{
+    text-align: center;
+    list-style: none;
+}
+.center li a{
+    padding: 10px;
+}
+
+.padx{
+  padding:12px;
+  
+ 
+}
+h1{
+    color:black;
+}
+.alx{
+    list-style:none;
+
+}
+
+
+.chkbox {
+  text-align: right;
+  padding-left: 10px;
+  font-weight: bold;
+ 
+}
+fieldset{
+  text-align:right
+}
+.tag{
+   text-align:left;
+}
+.fab {
+  padding: 20px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  color:blue;
+
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+.text-center{
+
+  width:100px;
+  margin-top:20px;
+ 
+}
+.alright{
+  text-align: right;
+}
+@media screen and (max-width: 767px) {
+  .mobile-space {margin-top:80px;}
+  }

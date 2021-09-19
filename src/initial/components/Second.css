@@ -1,0 +1,242 @@
+
+
+
+*{
+    font-family: Calibri;
+  }
+  .auth {
+      float:left;
+      margin: 2rem auto;
+      margin-left:200px;
+      width: 95%;
+      height: 500px;
+      max-width: 30rem;
+      border-radius: 25px;
+      background-color: white;
+      box-shadow: 0px 2px 8px 8px rgba(0, 0, 0, .15);
+      padding: 1rem;
+      text-align: center;
+    }
+    
+    .auth h1 {
+      text-align: center;
+      color: white;
+    }
+    .authx {
+      float:left;
+      margin-top:2px;
+      margin-left:100px;
+      margin-right:0px;
+      width: 99%;
+      max-width: 47rem;
+      border-radius: 6px;
+      background-color: white;
+      height:550px;
+      text-align: center;
+    }
+    .authx h1 {
+      text-align: center;
+      color: white;
+    }
+    
+    
+    .control {
+      margin-bottom: 0.5rem;
+    }
+    
+    .control label {
+      display: block;
+      color: black;
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+    }
+    
+    .control input {
+      font: inherit;
+      background-color:white;
+      color: #4b62c8;
+      border-radius: 4px;
+      border: 1px solid white;
+      width: 70%;
+      text-align: left;
+      margin:5px;
+      
+      margin-left:0px;
+    }
+    
+    .actions {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .actions button {
+      cursor: pointer;
+      font: inherit;
+      color: white;
+      background-color: #4b62c8;
+      border: 1px solid #4b62c8;
+      border-radius: 4px;
+      padding: 0.5rem 2.5rem;
+    }
+    
+    .actions button:hover {
+      background-color: #4b62c8;
+      border-color: #4b62c8;
+    }
+    
+    .actions .toggle {
+      margin-top: 1rem;
+      background-color: transparent;
+      color: #4b62c8;
+      border: none;
+      padding: 0.15rem 1.5rem;
+    }
+    
+    .actions .toggle:hover {
+      background-color: transparent;
+      color: #4b62c8
+      ;
+    }
+    .header {
+      width: 100%;
+      height: 5rem;
+      background-color: white;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: right;
+      padding: 0 10%;
+    }
+    
+    .logo {
+      font-family: 'Lato', sans-serif;
+      font-size: 2rem;
+      color: black;
+      margin: 0;
+    }
+    
+    .header ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: baseline;
+    }
+    
+    .header li {
+      margin: 0 1rem;
+    }
+    
+    .header a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    
+    .header button {
+      font: inherit;
+      background-color: transparent;
+      border: 1px solid white;
+      color: black;
+      font-weight: bold;
+      padding: 0.5rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    
+    .header a:hover {
+      color: #4b62c8
+      ;
+    }
+    
+    .header button:hover {
+      background-color: #4b62c8
+      ;
+      color: white
+      ;
+    }
+    .center{
+        text-align: center;
+        list-style: none;
+    }
+    .center li a{
+        padding: 10px;
+    }
+  
+    .padx{
+      padding:12px;
+      
+     
+  }
+    h1{
+        color:black;
+    }
+    .alx{
+        list-style:none;
+  
+    }
+    .one{
+      display: inline;
+      padding:6px;
+      float:left;
+      color:"#dee3fb",
+    }
+    
+    .two{
+      display: inline;
+      padding:6px;
+      float:right;
+    }
+    
+  .chkbox {
+      text-align: right;
+      padding-left: 10px;
+      font-weight: bold;
+     
+  }
+  fieldset{
+      text-align:right
+  }
+   .tag{
+       text-align:left;
+   }
+   .fab {
+      padding: 20px;
+      font-size: 20px;
+      width: 40px;
+      text-align: center;
+      text-decoration: none;
+      color:blue;
+   
+    }
+    
+    /* Add a hover effect if you want */
+    .fa:hover {
+      opacity: 0.7;
+    }
+   .inp{
+     height:40px;
+     width:100px;
+   }
+   .tag{
+     margin-left: 16px;
+    
+   }
+   .chkbox{
+     margin-right:28px;
+   }
+   .cn3{
+
+     margin-top:40px;
+     margin-left: 300px;
+     width: 500px;
+     height:71vh;
+     background-color: #e6ebfe;
+     float:right;
+     border-radius: 20px;
+     
+     margin:10px;
+    
+   }
