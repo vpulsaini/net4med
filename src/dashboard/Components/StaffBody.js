@@ -16,9 +16,9 @@ import 'react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css
  
 import ToolkitProvider, { CSVExport,Search } from 'react-bootstrap-table2-toolkit';
 import {Button} from 'react-bootstrap'
-const url = 'mmc/match/getMessagesToMe?publicationId=-1&toId=testpwt2@pwt.com&pwd=1234567890';
+const url = 'https://cors-anywhere.herokuapp.com/https://net4medix.com/mmc/match/getMessagesToMe?publicationId=-1&toId=stage1@pwt.com&pwd=1234567890';
 const columns = [
-  { dataField:  'Message.id', text: 'Id' },
+  { dataField:  'Message.id', text: 'Id' },       
   { dataField: 'Message.tempMsgId', text: 'role'},
   { dataField: 'Message.mrdNumber', text: 'email'},
   { dataField: 'Message.text', text: 'username'  },
@@ -97,10 +97,13 @@ export default function StaffBody() {
         >
             {
                 props => (
-                    <React.Fragment>
-                       
-        <SearchBar className="mt-1" { ...props.searchProps } />
-        <hr />
+                        <React.Fragment>
+                    <ul>
+                    <li  style={{display:"inline-block"}}>
+                      <MyExportCSV {...props.csvProps} /></li>
+     <li style={{display:"inline-block",float:"right"}}className="ml-1 me-auto"> <SearchBar  { ...props.searchProps } /></li>
+     </ul>
+      <hr />
                         <BootstrapTable responsive rowStyle={ {height:'10px'} }
                             // bootstrap4
                             // keyField=’id’
@@ -110,7 +113,7 @@ export default function StaffBody() {
                             filter={filterFactory()}
                             {...props.baseProps}
                         />
-                         <MyExportCSV {...props.csvProps} />
+                      
                     </React.Fragment>
                 )
             }

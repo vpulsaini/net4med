@@ -26,32 +26,32 @@ const RegisterOrgBody = () => {
 
   <InputGroup className="my-3">
     <InputGroup.Checkbox aria-label="Radio button for following text input" />
-    <Form.Label className="mx-3">Hello charu baby</Form.Label>
+    <Form.Label className="mx-3">Hello ji</Form.Label>
 
   </InputGroup>
   <InputGroup className="my-3">
     <InputGroup.Checkbox aria-label="Radio button for following text input" />
-    <Form.Label className="mx-3">Hello charu baby</Form.Label>
+    <Form.Label className="mx-3">Hello ji</Form.Label>
 
   </InputGroup>
   <InputGroup className="my-3">
     <InputGroup.Checkbox aria-label="Radio button for following text input" />
-    <Form.Label className="mx-3">Hello charu baby</Form.Label>
+    <Form.Label className="mx-3">Hello ji</Form.Label>
 
   </InputGroup>
   <InputGroup className="my-3">
     <InputGroup.Checkbox aria-label="Radio button for following text input" />
-    <Form.Label className="mx-3">Hello charu baby</Form.Label>
+    <Form.Label className="mx-3">Hello ji</Form.Label>
 
   </InputGroup>
   <InputGroup className="my-3">
     <InputGroup.Checkbox aria-label="Radio button for following text input" />
-    <Form.Label className="mx-3">Hello charu baby</Form.Label>
+    <Form.Label className="mx-3">Hello ji</Form.Label>
 
   </InputGroup>
   <InputGroup className="my-3">
     <InputGroup.Checkbox aria-label="Radio button for following text input" />
-    <Form.Label className="mx-3">Hello charu baby</Form.Label>
+    <Form.Label className="mx-3">Hello ji</Form.Label>
 
   </InputGroup>
   <ButtonGroup>

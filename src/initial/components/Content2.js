@@ -5,11 +5,11 @@ import React from 'react'
 import { Row,Col,Container ,Image,Card,Form,Button} from 'react-bootstrap';
 import swal from 'sweetalert';
 async function loginUser(param,varam) {
-  return fetch(`https://net4medix.com/mmc/match/validateAndFetchSubscriber?uname=${param}&pwd=${varam}` 
-  
-  
-  )
-    .then(data => data.json()).catch(data=>console.log(data));
+  return fetch(`https://cors-anywhere.herokuapp.com/https://net4medix.com/mmc/match/validateAndFetchSubscriber?uname=${param}&pwd=${varam}`, {
+    
+   
+  })
+    .then(data => data.json())
  }
 const Content = () => {
   const [uname, setUserName] = useState();
@@ -19,27 +19,24 @@ const Content = () => {
     e.preventDefault();
     const response = await loginUser(uname,pwd);
     console.log(response);
-    
+    let rex=response.Subscriber;
 
     if (response&&'Subscriber' in response) {
-      swal("Success", `Logging you in ${response.Subscriber.userName}`, "success", {
+      swal("Success", response.Subscriber.displayName, "success", {
         buttons: false,
-        timer: 4000,
+        timer: 2000,
       })
       .then((value) => {
-        localStorage.setItem('userName', response.Subscriber.userName);
-        localStorage.setItem('user', response.Subscriber.userName);
-         window.location.href = "/conversations";
+        localStorage.setItem('displayName', response.Subscriber.displayName);
+        localStorage.setItem('user', response.Subscriber.displayName);
+        // window.location.href = "/conversations";
       })
       console.log('Success');
-     
+      alert('Valid username or password');
     } else {
-      swal("Failed",'Invalid username or password',"error", {
-        buttons: false,
-        timer: 5000,
-      });
+      swal("Failed");
       console.log('Failed');
-     
+      alert('Invalid username or password');
     }
   }
     return (
@@ -77,7 +74,7 @@ const Content = () => {
           {(
             <button>Login</button>
           )}
-         
+          {<p>Sending request...</p>}
           <button
             type='button'
             className="toggle"

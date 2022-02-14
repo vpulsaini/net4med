@@ -30,13 +30,13 @@ const Second = () => {
   
 <Row >
     <Col >
-  <Form.Group className="mx-3"  controlId="formBasicPassword">
+  <Form.Group className="mx-3"  controlId="formBasicCity">
     <Form.Label>Your city</Form.Label>
     <Form.Control  type="text" placeholder="Enter a Location" />
   </Form.Group>
   </Col>
   <Col >
-  <Form.Group  className="mx-3" controlId="formBasicPassword">
+  <Form.Group  className="mx-3" controlId="formBasicName">
     <Form.Label>Your Name</Form.Label>
     <Form.Control   type="text" placeholder="Full Name" />
   </Form.Group>
@@ -44,13 +44,13 @@ const Second = () => {
   </Row>
  
    
-  <Form.Group className="mx-3"controlId="formBasicPassword">
+  <Form.Group className="mx-3"controlId="formBasicPhone">
     <Form.Label>Your Phone</Form.Label>
     <Form.Control  type="text" placeholder="Phone" />
   </Form.Group>
   
   
-  <Form.Group className="mx-3" controlId="formBasicPassword">
+  <Form.Group className="mx-3" controlId="formBasicEmail">
     <Form.Label>Your Email</Form.Label>
     <Form.Control   type="text" placeholder="Your Email" />
   </Form.Group>

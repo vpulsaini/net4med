@@ -13,8 +13,8 @@ const ContactUs = () => {
         <Row style={{marginTop:"30px"}} >
         <Between></Between>
         </Row>
-        <Row className="mt-5" >
-        <Footer ></Footer>
+        <Row style={{marginTop:"80px"}}  >
+        <Footer  ></Footer>
         </Row>
          
          

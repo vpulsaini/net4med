@@ -16,7 +16,7 @@ export default function Sidebarx (){
       console.log(location.hash);
   
     return (
-      <div  className="mt-0"style={{borderRight:"15px solid #cecece",height:"100vh",bottom:'0px',borderTopRightRadius:"50px",backgroundColor:"#033687"}} flexColumn>
+      <div  className="mt-0"style={{borderRight:"15px solid #cecece",height:"100%",bottom:'0px',borderTopRightRadius:"50px",backgroundColor:"#033687"}} flexColumn>
          
           <Image className="mt-3 ml-3" src="person.png" style={{width:"100px",height:"100px",borderRadius:"50%"}}>
           </Image>

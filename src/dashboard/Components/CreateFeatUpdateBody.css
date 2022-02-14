@@ -1,0 +1,13 @@
+.file_button_container,
+.file_button_container input {
+     height: 47px;
+     width: 263px;
+ }
+
+ .file_button_container {
+     background: transparent url('limg.jpg') left top no-repeat;
+ }
+
+ .file_button_container input {
+     opacity: 0;
+ }

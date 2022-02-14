@@ -1,52 +1,105 @@
-import React from 'react'
+import axios from 'axios'
+import React,{Component} from 'react'
 import { ListGroup ,Row,Col,Container,Card,Accordion,Button,Form} from 'react-bootstrap'
 import Select from 'react-select';
-const RegisterConsultationBody = () => {
-  const options4=[
-    { value: '11', label: 'Cash' },
-    { value: '12', label: 'Card' },
-    { value: '13', label: 'Cheque' },
-
-  ]
-  const options11=[
-    { value: '14', label: 'Gynaecologist Consultation' },
-
-
-  ]
-  const options12 =[
-    {value:'15',label:'Mr'},
-    {value:'16',label:'Ms.'}
-  ]
-  const dropdownIndicatorStyles = (base, state) => {
-    let changes = {
-      // all your override styles
-      color: 'black'
-    };
-    return Object.assign(base, changes);
-  };
-
-    return (
-        <Row className="mt-1 mx-1">
-   <Form action="../subm.js" method="POST">
+export default class RegisterConsultationBodyCopy extends Component{
+    constructor(props){
+        super(props)
+        
+        this.state={
+gender:'',
+name:'',
+mobile:'',
+yearOfBirth:'',
+healthId:''
+        }
+    }
+    changeHandler=(e)=>{
+        this.setState({[e.target.name]:e.target.value})
+    }
+    submitHandler =e =>{
+        e.preventDefault();
+        console.log(this.state);
+        axios.post('http://localhost:4009/v1/search/searchByMobile',this.state).then((response)=>{
+            console.log(response.data.healthId);
+               this.setState({
+            healthId:response.data.healthId
+               })
+            
+        }).catch(error=>{
+            console.log(error);
+        })
+    }
+    options4=[
+        { value: '11', label: 'Cash' },
+        { value: '12', label: 'Card' },
+        { value: '13', label: 'Cheque' },
+    
+      ]
+      options11=[
+        { value: '14', label: 'Gynaecologist Consultation' },
+    
+    
+      ]
+      options12 =[
+        {value:'15',label:'Mr'},
+        {value:'16',label:'Ms.'}
+      ]
+       dropdownIndicatorStyles = (base, state) => {
+        let changes = {
+          // all your override styles
+          color: 'black'
+        };
+        return Object.assign(base, changes);
+      };
+    
+    render(){
+        const{gender,name,mobile,yearOfBirth}= this.state;
+        return(
+            <div>
+             
+                  <Row className="mt-1 mx-1">
+   <Form onSubmit={this.submitHandler} method="POST">
    <Row className="mt-1 mx-5">
-      <Col md="5">
+      <Col md="2">
     <Form.Group className="mb-3" controlId="healthID">
                 <Form.Label className="flb">Health ID</Form.Label>
-                <Form.Control type="text" placeholder="Enter " name="HID" />
+                <Form.Control type="text" placeholder="Enter " name="HID" value={this.state.healthId}/>
              
               </Form.Group>
               </Col> 
-              <Col md="5">
+              <Col md="2">
+    <Form.Group className="mb-3" controlId="name">
+                <Form.Label className="flb">Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter " name="name" value={name} onChange={this.changeHandler}/>
+             
+              </Form.Group>
+              </Col> 
+              <Col md="2">
     <Form.Group className="mb-3" controlId="mobileNo">
                 <Form.Label className="flb">Mobile Number</Form.Label>
-                <Form.Control type="text" placeholder="Enter " name="mobile"/>
+                <Form.Control type="text" placeholder="Enter " name="mobile" value={mobile} onChange={this.changeHandler}/>
              
               </Form.Group>
               </Col>
               <Col md="2">
-    <Form.Group controlId="firstName">
+    <Form.Group className="mb-3" controlId="mobileNo">
+                <Form.Label className="flb">Gender</Form.Label>
+                <Form.Control type="text" placeholder="Gender" name="gender" value={gender} onChange={this.changeHandler}/>
+             
+              </Form.Group>
+              </Col>
+              <Col md="2">
+    <Form.Group className="mb-3" controlId="mobileNo">
+                <Form.Label className="flb">Year Of Birth</Form.Label>
+                <Form.Control type="text" placeholder="Enter Year" name="yearOfBirth" value={yearOfBirth} onChange={this.changeHandler}/>
+             
+              </Form.Group>
+              </Col>
+              <Col md="2">
+    <Form.Group controlId="Search">
    
-                <Button variant="primary" style={{marginTop:"30px"}} className="flb">Search
+                <Button type="submit" variant="primary" style={{marginTop:"30px"}} className="flb">Search
                 </Button>
                
              
@@ -71,7 +124,7 @@ const RegisterConsultationBody = () => {
            <Col md="5">
     <Form.Group className="mb-3" controlId="firstName">
                 <Form.Label className="flb">Payment Method</Form.Label>
-                <Select styles={{dropdownIndicator: dropdownIndicatorStyles}} components={{IndicatorSeparator:() => null }}    options={options4} id="uyt4">
+                <Select styles={{dropdownIndicator: this.dropdownIndicatorStyles}} components={{IndicatorSeparator:() => null }}    options={this.options4} id="uyt4">
                 
                  
 
@@ -90,7 +143,7 @@ const RegisterConsultationBody = () => {
     <Row className="mt-1">
     <Form.Group className="mb-3" controlId="firstName">
                 <Form.Label className="flb">Select Consultation</Form.Label>
-                <Select styles={{dropdownIndicator: dropdownIndicatorStyles}} components={{IndicatorSeparator:() => null }}    options={options11} id="uyt11">
+                <Select styles={{dropdownIndicator: this.dropdownIndicatorStyles}} components={{IndicatorSeparator:() => null }}    options={this.options11} id="uyt11">
                 
                  
 
@@ -103,7 +156,7 @@ const RegisterConsultationBody = () => {
       <Col md="2">
     <Form.Group className="mb-3" controlId="firstName">
                 <Form.Label className="flb">Title</Form.Label>
-                <Select styles={{dropdownIndicator: dropdownIndicatorStyles}} components={{IndicatorSeparator:() => null }}    options={options12} id="uyt11">
+                <Select styles={{dropdownIndicator: this.dropdownIndicatorStyles}} components={{IndicatorSeparator:() => null }}    options={this.options12} id="uyt11">
                 
                  
 
@@ -491,7 +544,7 @@ const RegisterConsultationBody = () => {
       </Card>
       
 </Row>
-    )}
-
-    export default RegisterConsultationBody;
-
+            </div>
+        )
+    }
+}

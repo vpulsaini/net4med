@@ -8,7 +8,7 @@ const Footer = () => {
         
        <Container  fluid style={{textAlign:'center',borderTop:"1px solid #cccccc"}}>
        <Row className="center" style={{marginTop:"10px"}}>
-<ul>
+<ul >
         <li>
         <a>
 <Image src="Fb.svg" style={{height:"25px"}} />

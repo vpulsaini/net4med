@@ -4,8 +4,8 @@ import Sidebarx from './Components/sidebar'
 import RegisterConsultationBodyCopy from './Components/RegisterConsultationBodycopy'
 import HeaderLoggedIn from '../shared/components/HeaderLoggedIn'
 import FooterLoggedIn from '../shared/components/FooterLoggedIn'
-import RegisterNDHMBody from './Components/RegisterNDHMBody'
-const RegisterConsultation = () => {
+import GetDetailsNDHMBody from './Components/GetDetailsNDHMBody'
+const GetDetailsNDHM = () => {
     return (
         <Container className="pl-0" fluid>
                      <Row>
@@ -14,7 +14,7 @@ const RegisterConsultation = () => {
             </Col>
             <Col xs={9}>
             <HeaderLoggedIn></HeaderLoggedIn>
-                <RegisterNDHMBody></RegisterNDHMBody>
+                <GetDetailsNDHMBody></GetDetailsNDHMBody>
                 </Col>
             </Row>
             <Row>
@@ -24,4 +24,4 @@ const RegisterConsultation = () => {
     )
 }
 
-export default RegisterConsultation
+export default GetDetailsNDHM

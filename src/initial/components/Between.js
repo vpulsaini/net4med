@@ -59,19 +59,19 @@ const Between = () => {
     <Form.Control style={{height:"32px"}} type="email" placeholder="Enter email" />
     
   </Form.Group>
-  <Form.Group className="mb-2" controlId="formBasicEmailx">
+  <Form.Group className="mb-2" controlId="formBasicName">
     <Form.Label>Your Name</Form.Label>
     <Form.Control style={{height:"32px"}} type="text" placeholder="Enter Name" />
   </Form.Group>
 <Row >
     <Col >
-  <Form.Group className="mb-2" controlId="formBasicPassword">
+  <Form.Group className="mb-2" controlId="formBasicPhone">
     <Form.Label>Phone</Form.Label>
     <Form.Control style={{height:"32px"}} type="text" placeholder="phone" />
   </Form.Group>
   </Col>
   <Col >
-  <Form.Group className="mb-2" controlId="formBasicPasswordx">
+  <Form.Group className="mb-2" controlId="formBasicCity">
     <Form.Label>City</Form.Label>
     <Form.Control style={{height:"32px"}} type="text" placeholder="city" />
   </Form.Group>

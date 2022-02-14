@@ -15,32 +15,44 @@ import filterFactory from 'react-bootstrap-table2-filter';
 import 'react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css';
  
 import ToolkitProvider, { CSVExport,Search } from 'react-bootstrap-table2-toolkit';
-import {Button} from 'react-bootstrap'
+import {Button, Image} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
-const url = 'mmc/match/getMessagesToMe?publicationId=-1&toId=testpwt2@pwt.com&pwd=1234567890';
+const tokenx = localStorage.getItem('userName');
+const url = `https://net4medix.com/mmc/match/getMessagesToMe?publicationId=-1&toId=${tokenx}&pwd=1234567890&count=-1&appVersion=0.0.31&providerName=Net4Medix&lite=true`;
+function imageFormatter(cell, row){
+  return "Hello";
+}
+
 const columns = [
-  { dataField : 'Message.id', text: 'id',
-  formatter: (cell, row) => <Link style={{textDecoration:"none"}} to={{pathname:'/allconversationaction', hash:cell }}> {cell}</Link>
+//   { dataField : 'Message.id', text: 'id',
+//   formatter: (cell, row) => <Link style={{textDecoration:"none"}} to={{pathname:'/allconversationaction', hash:cell }}> {cell}</Link>
   
 
+// },
+
+  {dataField:'Message.orderProgressLevel',text:'status',  style: {'width':'60px'},
+ formatter: (cell, row) =><Image src={`patient_${cell}.png`}></Image>}
+,
+  { dataField: 'Message.text', text: 'title',
+  formatter: (cell, row) => <Link  style={{textDecoration:"none"}} to={{pathname:'/allconversationaction',hash:row.Message.lastPublicationId, state:{uname:row.Message.From.userName,passw:row.Message.From.mobileNumber,pubId:row.Message.lastPublicationId,pName:row.Message.Provider,noOfImages:'5'}}} > {cell}</Link>
 },
-  { dataField: 'Message.From.emailAddress', text: 'email'},
-  { dataField: 'Message.Provider', text: 'username'},
-  { dataField: 'Message.From.dateRegistered', text: 'date'  },
-  { dataField: 'Message.mrdNumber', text: 'Mrd Number'}
+  
+  { dataField: 'Message.From.dateRegistered', text: 'date'  }
+
+  
 ];
 const { SearchBar } = Search;
 const { ExportCSVButton } = CSVExport;
  
 const MyExportCSV = (props) => {
-    const handleClick = () => {
-        props.onExport();
-    };
-    return (
-        <div>
-            <Button variant="primary" onClick={handleClick}>Export to CSV</Button>
-        </div>
-    );
+  const handleClick = () => {
+      props.onExport();
+  };
+  return (
+      <div>
+          <Button variant="primary" onClick={handleClick}>Export to CSV</Button>
+      </div>
+  );
 };
 const pagination =paginationFactory({
          page:1,
@@ -66,25 +78,46 @@ const pagination =paginationFactory({
 });
 
 export default function ConversationBody() {
-  const [posts, setPosts] = useState([]);
+  const [bbc,setbbc] =useState({});
+  const [posts, setPosts] = useState({});
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
+  const localUser = JSON.parse(localStorage.getItem('testObject')) || {};
+let [userData, setUserData] = useState(localUser);
 
+  let pkahai=localStorage.getItem('trigger');
   useEffect(() => {
+    
     fetch(url)
       .then((response) => {
         if (response.ok) return response.json();
         throw new Error('something went wrong while requesting posts');
       })
-      .then((posts) => setPosts(posts))
+      .then((postsv) =>{setPosts(postsv);
+        console.log(postsv);
+                      setbbc(postsv);
+        localStorage.setItem('trigger','yes');
+        
+        localStorage.setItem('testObject',JSON.stringify(postsv));
+        setUserData(JSON.parse(localStorage.getItem('testObject')));
+        // Retrieve the object from storage
+        
+        
+        
+      })
       .catch((error) => setError(error.message));
-  }, []);
+  },[]);
+  let pf=posts;
+   
 
   if (error) return <h1>{error}</h1>;
- let asd=Object.values(posts)
- let bk=(asd.flat(1)).reverse();
- console.log(bk)
- if(bk.length===0){
+  
+   
+console.log(typeof(userData));
+ let asd=Object.values(userData);
+ let bk=(asd.flat(2));
+console.log(bk.length);
+ if(bk.length<2){
    return(<><div class="mt-3 spinner-border" role="status">
    <h3 class="sr-only">Loading...</h3>
  </div>
@@ -92,7 +125,7 @@ export default function ConversationBody() {
  </>)
  }
   return (
-    <div>
+    <div >
         <ToolkitProvider 
             bootstrap
             keyField='id'

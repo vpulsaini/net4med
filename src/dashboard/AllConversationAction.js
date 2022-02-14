@@ -6,18 +6,23 @@ import HeaderLoggedIn from '../shared/components/HeaderLoggedIn'
 import FooterLoggedIn from '../shared/components/FooterLoggedIn'
 const AllConversationAction = () => {
     return (
-        <Container className="pl-0" fluid>
+        <Container style={{height:'100%',bottom:'0'}} className="pl-0" fluid>
                    <Row>
                 <Col  xs={3}>
-            <Sidebarx ></Sidebarx>
+                    <Row style={{height:"100%",bottom:0,overflowY:'auto'}}>
+            <Sidebarx style={{height:'100%',bottom:0}} ></Sidebarx>
+            </Row>
             </Col>
-            <Col xs={9}>
+            <Col xs={9} >
+             
             <HeaderLoggedIn></HeaderLoggedIn>
                 <AllConversationActionBody></AllConversationActionBody>
+               
+                <FooterLoggedIn ></FooterLoggedIn>
+              
             </Col>
-            </Row>
-            <Row>
-       <FooterLoggedIn></FooterLoggedIn>
+            
+       
             </Row>
         </Container>
     )

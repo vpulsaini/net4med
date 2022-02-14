@@ -16,7 +16,7 @@ const AllConsultation = () => {
                 <AllConsultationBody></AllConsultationBody>
             </Col>
             </Row>
-            <Row>
+            <Row >
        <FooterLoggedIn></FooterLoggedIn>
             </Row>
         </Container>

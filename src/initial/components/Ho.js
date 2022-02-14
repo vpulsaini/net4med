@@ -4,6 +4,7 @@ import { Image,Container,Row,Col, Button,Carousel,Navbar,NavDropdown,Nav,Card,Ac
 
 
 const Ho = () => {
+ 
     return (
         <Container fluid>
             <Row>
@@ -87,7 +88,7 @@ const Ho = () => {
 
        <Row className="mt-5">
        <Accordion  defaultActiveKey="0" flush>
-                        <Card  className="mx-8 mx-5 my-3 " >
+                        <Card  className="mx-8 my-3 " >
                             <Accordion.Toggle style={{background:"white",border:"none"}} className="cen" eventKey="0">
                                 <h4 style={{color:"#150da8",fontWeight:"bold",fontSize:"40px"}}>Features &nbsp;<i class="fa fa-caret-down" style={{fontSize:"25px"}}></i></h4>
                                 
@@ -159,7 +160,7 @@ const Ho = () => {
        <Row className="mt-5">
      
        <Accordion  defaultActiveKey="0" flush>
-                        <Card className=" mx-8 mx-5 my-3" >
+                        <Card className=" mx-8 my-3" >
                             <Accordion.Toggle style={{background:"white",border:"none"}} className="cen"  eventKey="0">
                             <h4 style={{color:"#150da8",fontWeight:"bold",fontSize:"40px"}}>Case studies &nbsp;<i class="fa fa-caret-down" style={{fontSize:"25px"}}></i></h4>
                             </Accordion.Toggle>
@@ -245,16 +246,18 @@ const Ho = () => {
               </Row>
               </Container>
        </Row>
-       <Row className="mt-5"  >
       
-        <div style={{textAlign:"center"}}>
+       <Row className="mt-5"  >
+     
+        <div style={{textAlign:"center"}} id="lowerone">
         <h4 style={{color:"#150da8",fontWeight:"bold",fontSize:"40px",marginTop:"20px"}}>FAQs</h4>
         </div>
-        <div style={{height:"300px",backgroundColor:"#4b62c8",position:"absolute",marginTop:"150px"}}></div>
+        <div style={{height: `calc(600px - 20vw)`,backgroundColor:"#4b62c8",position:"absolute",marginTop:"150px"}}></div>
 
    
-     <div  className="mx-5" style={{width:"93%"}} >
-     <Card  style={{background:"white",border:"2px solid #f1f1f1",borderRadius:"25px"}} >
+     <div   style={{justifyContent:'center'}} id="upperone" >
+  
+     <Card className="mx-5" style={{background:"white",border:"2px solid #f1f1f1",borderRadius:"25px"}} >
          
          <Card.Body  >
        
